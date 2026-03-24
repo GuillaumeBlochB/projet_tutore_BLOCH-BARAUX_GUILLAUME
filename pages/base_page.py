@@ -10,19 +10,19 @@ class BasePage:
     def open(self, path=""):
         self.driver.get(BASE_URL + path)
 
-    def click(self, locator: tuple, timeout=10):
+    def click(self, locator: tuple, timeout=15):
         WebDriverWait(self.driver, timeout).until(
             EC.element_to_be_clickable(locator)
         ).click()
     
-    def enter_text(self, locator, text, timeout=10):
+    def enter_text(self, locator, text, timeout=15):
         elem = WebDriverWait(self.driver, timeout).until(
             EC.visibility_of_element_located(locator)
         )
         elem.clear()
         elem.send_keys(text)
 
-    def get_text(self, locator, timeout=10):
+    def get_text(self, locator, timeout=15):
         elem = WebDriverWait(self.driver, timeout).until(
             EC.visibility_of_element_located(locator)
         )
@@ -32,13 +32,13 @@ class BasePage:
         return self.driver.current_url
 
 
-    def get_elements(self, locator, timeout=10):
+    def get_elements(self, locator, timeout=15):
         elem = WebDriverWait(self.driver, timeout).until(
             EC.visibility_of_all_elements_located(locator)
         )
-        return [x.text for x in elem]
+        return elem
 
-    def wait_for_url_contains(self, partial_url, timeout=10):
+    def wait_for_url_contains(self, partial_url, timeout=15):
         WebDriverWait(self.driver, timeout).until(
             EC.url_contains(partial_url)
         )
