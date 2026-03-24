@@ -2,6 +2,7 @@ import pytest
 from utils.driver_factory import get_driver
 from config.settings import BASE_URL
 from pages.login_page import LoginPage
+from pages.password_forgotten_page import PasswordForgottenPage
 
 DEBUG = False
 
@@ -19,5 +20,11 @@ def driver():
 @pytest.fixture
 def login_page(driver):
     page = LoginPage(driver)
+    page.open()
+    return page
+
+@pytest.fixture
+def pw_forgotten_page(driver):
+    page = PasswordForgottenPage(driver)
     page.open()
     return page

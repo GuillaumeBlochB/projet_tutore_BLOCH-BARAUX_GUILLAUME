@@ -13,5 +13,5 @@ logging.basicConfig(
     ]
 )
 
-logging.getLogger("selenium").setLevel(logging.WARNING)
+logging.getLogger("selenium").setLevel(logging.INFO)
 logger = logging.getLogger("selenium_logger")
