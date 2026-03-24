@@ -6,4 +6,4 @@ class LoginLocators:
     LOGIN_BUTTON = (By.XPATH, "//form//button[@type='submit']")
     ERROR_MESSAGE = (By.XPATH, "//div[@role='alert']//p")
     REQUIRED_MESSAGE = (By.XPATH, "//span[contains(@class, 'oxd-input-field-error-message')]")
-    FORGOT_PASSWORD_LINK = (By.XPATH, "//span[contains(@class, 'orangehrm-login-forgot-header')]")
+    FORGOT_PASSWORD_LINK = (By.XPATH, "//p[contains(@class, 'orangehrm-login-forgot-header')]")

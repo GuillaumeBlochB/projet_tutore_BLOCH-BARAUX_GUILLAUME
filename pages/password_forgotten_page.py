@@ -12,6 +12,9 @@ class PasswordForgottenPage(BasePage):
             username (str): The username
         """        
         self.enter_text(PasswordForgottenLocators.USERNAME_INPUT, username)
+
+    def is_loaded(self):
+        return "requestPasswordResetCode" in self.get_current_url()
     
     def click_reset_password(self):
         """Clicks on the Reset Password button"""

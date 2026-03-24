@@ -37,10 +37,13 @@ class LoginPage(BasePage):
         self.click_login()
 
     def get_error_message(self):
+        """Retrieves the error message displayed on unsuccessful login"""        
         return self.get_text(LoginLocators.ERROR_MESSAGE)
     
     def get_required_fields(self):
+        """Fetches all required fields of a form"""        
         return self.get_elements(LoginLocators.REQUIRED_MESSAGE)
     
     def click_forgot_password(self):
+        """Navigates to the password forgotten page"""
         self.click(LoginLocators.FORGOT_PASSWORD_LINK)
