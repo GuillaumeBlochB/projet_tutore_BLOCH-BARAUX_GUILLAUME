@@ -37,7 +37,8 @@
 |---|---|---|---|---|
 |TC_01   | Login   | Account is created  | Enter credentials, press login  | User is logged in, dashboard is displayed   |
 | TC_02    | Login - Failed   | None  | Enter invalid credentials, press login  | User stays on login page, error is displayed   |
-|TC_03   | Dashboard   | User is logged in   | Verify presence of all elements   | Elements are : Time at Work, My Actions, Quick Launch, Buzz Latest Posts, Employees on Leave Today, Employee Distribution by Sub Unit, Employee Distribution by Location|
+| TC_03 | Password Forgottent | None | Click on Forgot your password, enter username | An email is sent to the matching account |
+|TC_04   | Dashboard   | User is logged in   | Verify presence of all elements   | Elements are : Time at Work, My Actions, Quick Launch, Buzz Latest Posts, Employees on Leave Today, Employee Distribution by Sub Unit, Employee Distribution by Location|
 
 # Defect Management
 
