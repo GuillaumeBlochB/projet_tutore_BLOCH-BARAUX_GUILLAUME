@@ -31,6 +31,13 @@ class BasePage:
     def get_current_url(self):
         return self.driver.current_url
 
+
+    def get_elements(self, locator, timeout=10):
+        elem = WebDriverWait(self.driver, timeout).until(
+            EC.visibility_of_all_elements_located(locator)
+        )
+        return [x.text for x in elem]
+
     def wait_for_url_contains(self, partial_url, timeout=10):
         WebDriverWait(self.driver, timeout).until(
             EC.url_contains(partial_url)

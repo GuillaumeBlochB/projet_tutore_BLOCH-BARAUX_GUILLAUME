@@ -1,8 +1,9 @@
 import pytest
 from utils.driver_factory import get_driver
 from config.settings import BASE_URL
+from pages.login_page import LoginPage
 
-DEBUG = True
+DEBUG = False
 
 @pytest.fixture
 def driver():
@@ -14,3 +15,9 @@ def driver():
         input("Press Enter to close the browser...")
 
     driver.quit()
+
+@pytest.fixture
+def login_page(driver):
+    page = LoginPage(driver)
+    page.open()
+    return page
