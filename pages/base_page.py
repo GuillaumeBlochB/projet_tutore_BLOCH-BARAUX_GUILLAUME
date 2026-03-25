@@ -1,9 +1,8 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from config.settings import BASE_URL
+from config.settings import BASE_URL, TIMEOUT
 
-TIMEOUT = 20
 
 class BasePage:
     def __init__(self, driver):

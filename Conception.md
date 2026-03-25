@@ -53,7 +53,10 @@ TODO:
 |TC_06   | Dashboard   | User is logged in   | Verify presence of all elements   | Elements are : Time at Work, My Actions, Quick Launch, Buzz Latest Posts, Employees on Leave Today, Employee Distribution by Sub Unit, Employee Distribution by Location|
 |TC_07| Dashboard side panel | User is logged in | Count number of expected links and their names| All of the expected links display and their names match
 |TC_08 | Dashboard side panel filtering | User is logged in | Input value "Admin" in the search filter on the side panel | The filtered list of options only consists of the "Admin" option | 
-| TC_09 | Verifying Recruitment option list | User is logged in | Click the "Status" Dropdown, verify that all elements are present | All 9 elements (+ -- Select --) are present in the dropdown 
+| TC_09 | Verifying Recruitment option list | User is logged in, on Recruitment page | Click the "Status" Dropdown, verify that all elements are present | All 9 elements (+ -- Select --) are present in the dropdown 
+| TC_10 | Filtering and verifying proper display of results | User is logged in, on Recruitment page | Click "Job Title" and select a value, Click "Status" and select a value then click "Search" button. | The filtered results should appear in the table below. |
+| TC_11 | Filtering and verifying absence of results and presence of toaster | User is logged in and on the recruitment page | Click "Job Title" and select a value, click "Status" and select a value then click "Search" button. | The combination of filters should generate 0 results, displaying "No Records Found" and a blue toaster should appear, indicating an absence of records |
+
 
 # Defect Management
 
