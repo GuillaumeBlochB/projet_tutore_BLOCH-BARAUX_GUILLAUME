@@ -4,7 +4,7 @@ As part of my training for Sogeti, I was asked to do some automated tests. This 
 
 # Coding philosophy and structure
 
-I will be using OOP with Page Object Model. Therefore, folder structure will be as follows:
+I will be using OOP with Page Object Model. Folder structure will be as follows:
 <br>
 ├── pages/<br>
 └── tests/<br>
