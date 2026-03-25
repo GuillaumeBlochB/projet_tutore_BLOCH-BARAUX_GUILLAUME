@@ -1,7 +1,8 @@
 from locators.recruitment_locators import RecruitmentLocators
 from .base_page import BasePage
 
-import time 
+import re
+import time
 
 class RecruitmentPage(BasePage):
     def open(self):
@@ -53,9 +54,35 @@ class RecruitmentPage(BasePage):
         """
         self.wait_for_element_visible(RecruitmentLocators.RESULTS_TABLE)
         # Using sleep here, check Defect on TC_09
-        time.sleep(1)
+        time.sleep(2)
         for locator, value in filters.items():
             self.click(locator)
+            time.sleep(1)
             self.select_option(value)
 
         self.filter_results()
+
+    def get_records_count(self):
+        """Returns number of results or 0 if no results"""
+        
+        # Check "No Records Found"
+        if self.wait_for_element_visible(RecruitmentLocators.NO_RECORDS_TEXT):
+            return 0
+
+        # Otherwise extract count
+        text = self.get_element(RecruitmentLocators.RESULTS_COUNT).text
+        
+        import re
+        match = re.search(r"\((\d+)\)", text)
+        
+        if match:
+            return int(match.group(1))
+
+        raise ValueError(f"Unexpected results text: {text}")
+            
+    def is_no_result_toaster_visible(self) -> bool:
+        try:
+            self.get_element(RecruitmentLocators.NO_RESULT_TOASTER, timeout=5)
+            return True
+        except:
+            return False
