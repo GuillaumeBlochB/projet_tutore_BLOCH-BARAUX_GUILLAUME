@@ -80,9 +80,14 @@ class RecruitmentPage(BasePage):
 
         raise ValueError(f"Unexpected results text: {text}")
             
-    def is_no_result_toaster_visible(self) -> bool:
+    def get_toaster_text(self) -> str | bool:
+        """Gets the value of the text present in the toaster if the toaster shows up
+
+        Returns:
+            str | bool: The toaster message if present
+        """     
         try:
-            self.get_element(RecruitmentLocators.NO_RESULT_TOASTER, timeout=5)
-            return True
+            msg = self.get_element(RecruitmentLocators.TOAST_MESSAGE, timeout=5).text
+            return msg
         except:
             return False

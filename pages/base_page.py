@@ -2,7 +2,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from config.settings import BASE_URL, TIMEOUT
-
+from locators.base_page_locators import BasePageLocators
 
 class BasePage:
     def __init__(self, driver):
@@ -65,3 +65,7 @@ class BasePage:
         WebDriverWait(self.driver, timeout).until(
             EC.url_contains(partial_url)
         )
+    
+    def logout(self):
+        self.click(BasePageLocators.USER_DROPDOWN)
+        self.click(BasePageLocators.LOGOUT_ITEM)

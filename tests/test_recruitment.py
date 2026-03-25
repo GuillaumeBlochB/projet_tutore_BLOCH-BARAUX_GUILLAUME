@@ -38,7 +38,8 @@ def test_filter_option_results_found(recruitment_page):
     assert results == 1
 
 def test_filter_option_no_results(recruitment_page):
-    """Fitlering the results by Job Title and Status and checking for the absence of results and display of the Toaster"""    
+    """Fitlering the results by Job Title and Status and checking for the absence of results and display of the Toaster"""  
+
     recruitment_page.open()
 
     logger.info("Verifying URL")
@@ -58,5 +59,7 @@ def test_filter_option_no_results(recruitment_page):
     logger.info(f"Found {results} results")
     assert results == 0
 
-    assert recruitment_page.is_no_result_toaster_visible()
+    logger.info("Checking for Info toaster")
+    el = recruitment_page.get_toaster_text()
+    assert el == "Info"
     

@@ -8,4 +8,4 @@ class RecruitmentLocators:
     RESULTS_TABLE = (By.CLASS_NAME, "oxd-table-body")
     RESULTS_COUNT = (By.XPATH, "//span[contains(normalize-space(), 'Record Found')]")
     NO_RECORDS_TEXT = (By.XPATH, "//span[normalize-space()='No Records Found']")
-    NO_RESULT_TOASTER = (By.ID, "oxd-toaster_1")
+    TOAST_MESSAGE = (By.XPATH, "//div[@id='oxd-toaster_1']//p[1]")
