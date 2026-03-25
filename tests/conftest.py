@@ -5,6 +5,7 @@ from pages.login_page import LoginPage
 from pages.password_forgotten_page import PasswordForgottenPage
 from pages.dashboard_page import DashboardPage
 from pages.recruitment_page import RecruitmentPage
+from pages.change_password_page import ChangePasswordPage
 from config import settings
 
 DEBUG = False
@@ -46,4 +47,9 @@ def dashboard_page(login):
 @pytest.fixture
 def recruitment_page(login):
     page = RecruitmentPage(login.driver)
+    return page
+
+@pytest.fixture
+def change_password_page(login):
+    page = ChangePasswordPage(login.driver)
     return page
