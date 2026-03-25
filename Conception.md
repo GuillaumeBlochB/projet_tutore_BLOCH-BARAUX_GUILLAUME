@@ -6,7 +6,7 @@
 
 # Scope of testing
 
-- Login Page, Dashboard, Recruitment, Change password.
+- Login Page, Change Password, Dashboard, Recruitment, Change password.
 These features have been chosen for their frequency of usage, importance and impact, as well as from a technical standpoint that would be interesting to showcase in a presentation (xpath, IDs, selects, counts...)
 
 # Test strategy
@@ -27,7 +27,7 @@ The website is a HRMS (Human Resources Management System). As such, we find usua
     - Selenium Python
 
 - Why Selenium Python ?<br>
-I quite enjoy using Python without the need for an added framework. For that reason, I have refused to use RobotFramework. I reckon the project could also have been done with Cypress, and - given more time - I could also redo it with this tool. 
+I quite enjoy using Python without the need for an added framework. For that reason, I have refused to use RobotFramework. I reckon the project could also have been done with Cypress or Playwright, and - given more time - I could also redo it with either of these tools. 
 
 # Entry and Exit Criteria
 
