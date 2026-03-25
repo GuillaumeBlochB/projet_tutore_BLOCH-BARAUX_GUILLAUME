@@ -36,6 +36,7 @@ class RecruitmentPage(BasePage):
             list: Returns a list of WebElements containing the options from the opened dropdown
         """        
         self.wait_for_element_visible(RecruitmentLocators.RESULTS_TABLE)
+        # Using sleep here, check Defect on TC_09
         time.sleep(1)
         self.click(locator)
         return self.get_options()
@@ -51,6 +52,7 @@ class RecruitmentPage(BasePage):
             filters (dict): {locator: value}
         """
         self.wait_for_element_visible(RecruitmentLocators.RESULTS_TABLE)
+        # Using sleep here, check Defect on TC_09
         time.sleep(1)
         for locator, value in filters.items():
             self.click(locator)
