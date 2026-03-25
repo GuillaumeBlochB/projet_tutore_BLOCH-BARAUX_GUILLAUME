@@ -10,6 +10,12 @@ class BasePage:
     def open(self, path=""):
         self.driver.get(BASE_URL + path)
 
+    
+    def wait_for_element_visible(self, locator: tuple, timeout: int = 10):
+        return WebDriverWait(self.driver, timeout).until(
+            EC.visibility_of_element_located(locator)
+    )
+
     def is_loaded(self, path:str) -> bool:
         """Checks if the requested path is present in URL
 

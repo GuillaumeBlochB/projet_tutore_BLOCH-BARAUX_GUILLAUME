@@ -4,6 +4,7 @@ from config.settings import BASE_URL
 from pages.login_page import LoginPage
 from pages.password_forgotten_page import PasswordForgottenPage
 from pages.dashboard_page import DashboardPage
+from pages.recruitment_page import RecruitmentPage
 from config import settings
 
 DEBUG = False
@@ -40,4 +41,9 @@ def pw_forgotten_page(driver):
 @pytest.fixture
 def dashboard_page(login):
     page = DashboardPage(login.driver)
+    return page
+
+@pytest.fixture
+def recruitment_page(login):
+    page = RecruitmentPage(login.driver)
     return page
