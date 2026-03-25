@@ -3,7 +3,7 @@ from locators.password_forgotten_locators import PasswordForgottenLocators
 
 class PasswordForgottenPage(BasePage):
     def open(self):
-        super().open("/web/index.php/auth/requestPasswordResetCode")
+        super().open("/auth/requestPasswordResetCode")
 
     def enter_username(self, username: str):
         """Inputs a username in the username field
@@ -12,10 +12,7 @@ class PasswordForgottenPage(BasePage):
             username (str): The username
         """        
         self.enter_text(PasswordForgottenLocators.USERNAME_INPUT, username)
-
-    def is_loaded(self):
-        return "requestPasswordResetCode" in self.get_current_url()
-    
+   
     def click_reset_password(self):
         """Clicks on the Reset Password button"""
         self.click(PasswordForgottenLocators.RESET_PASSWORD_BUTTON)

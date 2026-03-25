@@ -3,11 +3,7 @@ from locators.login_locators import LoginLocators
 
 class LoginPage(BasePage):
     def open(self):
-        super().open("/web/index.php/auth/login")
-
-    def is_loaded(self):
-        """Checks if page is loaded"""
-        return "/auth/login" in self.get_current_url()  
+        super().open("/auth/login")
 
     def enter_username(self, username: str | None):
         """Inputs a username in the username field

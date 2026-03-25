@@ -1,10 +1,7 @@
 from .base_page import BasePage
 from locators.dashboard_locators import DashboardLocators
 
-class DashboardPage(BasePage):
-    def is_loaded(self):
-        return "dashboard" in self.get_current_url()
-    
+class DashboardPage(BasePage):   
     def get_dashboard_elements(self) -> list:
         """Retrieves the name of all widgets present on the dashboard
 

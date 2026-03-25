@@ -7,7 +7,7 @@ def test_login_success(login_page):
     """A test verifying proper login with correct credentials. Asserts URL of landing page and going to dashboard"""    
     
     logger.info("Verifying URL")
-    assert login_page.is_loaded()
+    assert login_page.is_loaded("/auth/login")
 
     logger.info("Entering credentials")
     login_page.login(settings.USERNAME, settings.PASSWORD)
@@ -16,13 +16,13 @@ def test_login_success(login_page):
     
     logger.info("Verifying dashboard URL")
     dashboard_page.wait_for_url_contains("/dashboard")
-    assert dashboard_page.is_loaded()
+    assert dashboard_page.is_loaded("/dashboard")
 
 def test_login_failed(login_page):
     """A test verifying failed login with incorrect credentials. Asserts URL of landing page and proper display of error message"""    
 
     logger.info("Verifying URL")
-    assert login_page.is_loaded()
+    assert login_page.is_loaded("/auth/login")
 
     logger.info("Entering wrong credentials")
     login_page.login("BogusUsername", "BogusPassword")
@@ -51,4 +51,4 @@ def test_navigation_to_password_forgotten(login_page):
 
     logger.info("Verifying password forgotten URL")
     password_forgotten_page.wait_for_url_contains("/requestPasswordResetCode")
-    assert password_forgotten_page.is_loaded()
+    assert password_forgotten_page.is_loaded("/requestPasswordResetCode")
