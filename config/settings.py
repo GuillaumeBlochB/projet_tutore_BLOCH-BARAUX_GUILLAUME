@@ -3,5 +3,6 @@ import os
 
 load_dotenv(dotenv_path="secrets.env", override=True)
 BASE_URL = "https://opensource-demo.orangehrmlive.com/web/index.php"
+TIMEOUT = 20
 USERNAME=os.getenv("USERNAME")
 PASSWORD=os.getenv("PASSWORD")
