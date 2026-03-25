@@ -1,26 +1,21 @@
-More sentences, less bullets
-Detail choices
-Why Selenium
-
 # Goals
 
-- Verify that the system meets requirements
-- Identify defects
+- Verify that the system meets requirements, e.g good user experience, functioning interface, main features are working properly.
+- Identify defects. They will be recorded in Defect_report.md
 - Ensure product quality
 
 # Scope of testing
 
 - Login Page, Dashboard, Recruitment, Change password.
-These features have been chosen for their frequency of usage, importance and impact, as well as technical point that would be interesting to showcase in a presentation (xpath, IDs, selects, counts...)
-
+These features have been chosen for their frequency of usage, importance and impact, as well as from a technical standpoint that would be interesting to showcase in a presentation (xpath, IDs, selects, counts...)
 
 # Test strategy
 
-- Automated testing<br>
-TODO: 
-- Why these tests have been chosen to be automated ?
-- Why these features
-- Add Context on app
+- Automated testing<bR>
+The following tests have been chosen for automation due to their repetitive nature. To me, they qualify as usual user experience and navigation within the application. 
+
+- Context on OrangeHRM<br>
+The website is a HRMS (Human Resources Management System). As such, we find usual tasks dedicated to this BU (leaves, interviews, timesheets...) 
 
 # Test Environment
 
@@ -30,6 +25,9 @@ TODO:
     - Chrome Browser
 - Tools
     - Selenium Python
+
+- Why Selenium Python ?<br>
+I quite enjoy using Python without the need for an added framework. For that reason, I have refused to use RobotFramework. I reckon the project could also have been done with Cypress, and - given more time - I could also redo it with this tool. 
 
 # Entry and Exit Criteria
 
