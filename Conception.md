@@ -61,7 +61,7 @@ I quite enjoy using Python without the need for an added framework. For that rea
 
 # Defect Management
 
-Anomalies will be included in the Defect_report.md file
+Anomalies will be included in the Defect_report.md file.
 
 # Schedule 
 

@@ -22,7 +22,7 @@ Config will contain useful global constants.
 # Run the code
 
 1. pip install -r requirements.txt
-2. set up a secrets.env for login and password
+2. set up a secrets.env for login and password at folder root
 3. run the tests from project root folder with ```pytest tests/ --html=reports/report.html -v```
 
 
