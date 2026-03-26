@@ -30,9 +30,6 @@ class RecruitmentPage(BasePage):
     def get_dropdown_options(self, locator: tuple) -> list:
         """Opens the specified dropdown and retrieves its options
 
-        Args:
-            locator (tuple): 
-
         Returns:
             list: Returns a list of WebElements containing the options from the opened dropdown
         """        
